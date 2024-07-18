@@ -144,9 +144,9 @@ int	Btc::checkValue(std::string line)
 			return 1;
 	if ((year % 4 == 0  && year % 100 != 0) || year % 400 == 0)
 	{
-		if (day > 29)
+		if (month == 2 && day > 29)
 			return 1;
-		else if (day > 28)
+		else if (month == 2 && day > 28)
 			return 1;
 	}
 	double val = std::strtod(line.substr(pos + 1).c_str(), NULL);

@@ -20,15 +20,15 @@ static long long GetCurrentTimeMicros() {
 PmergeMe::PmergeMe(std::string input)
 {
 	FillInput(input);
-	long long startTime = GetCurrentTimeMicros();
 
-   long long endTime = GetCurrentTimeMicros();
-   long long TimeForLists = endTime - startTime;
     std::cout << "Before :";
 	for (std::list<int>::iterator it = list.begin(); it != list.end(); ++it) {
         std::cout << *it << " ";
    }
+	long long startTime = GetCurrentTimeMicros();
 	std::list<int> sortedNumbers = ListFordJohnsonSort(this->list);
+   long long endTime = GetCurrentTimeMicros();
+   long long TimeForLists = endTime - startTime;
    std::cout << std::endl;
 	startTime = GetCurrentTimeMicros();
 	std::vector<int> sorted = VecFordJohnsonSort(this->vec);
