@@ -1,6 +1,6 @@
-NAME = whatever
+NAME = Convert
 
-SRC =  main.cpp \
+SRC = main.cpp ScalarConverter.cpp\
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 

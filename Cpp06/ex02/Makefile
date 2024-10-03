@@ -1,6 +1,6 @@
-NAME = Array
+NAME = identify
 
-SRC =  main.cpp\
+SRC =  main.cpp Base.cpp\
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 

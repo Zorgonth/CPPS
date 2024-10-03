@@ -5,26 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sal-zuba <sal-zuba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/24 13:10:44 by sal-zuba          #+#    #+#             */
-/*   Updated: 2024/07/09 10:45:17 by sal-zuba         ###   ########.fr       */
+/*   Created: 2024/05/21 16:26:11 by sal-zuba          #+#    #+#             */
+/*   Updated: 2024/07/08 10:38:59 by sal-zuba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "whatever.hpp"
+#include "ScalarConverter.hpp"
 
-int main(void)
+int main(int argc, char **argv)
 {
-	int a = 2;
-	int b = 3;
-	::swap( a, b );
-	std::cout << "a = " << a << ", b = " << b << std::endl;
-	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-	std::string c = "string1";
-	std::string d = "string2";
-	::swap(c, d);
-	std::cout << "c = " << c << ", d = " << d << std::endl;
-	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+	ScalarConverter& converter = ScalarConverter::getInstance();
+	if (argc != 2)
+	{
+		std::cout << "Please enter a value for the converter to convert! Make sure it's one value only!" << std::endl;
+		return 1;
+	}
+	converter.convert(argv[1]);
 	return 0;
 }

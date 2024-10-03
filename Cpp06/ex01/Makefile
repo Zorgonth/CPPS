@@ -1,6 +1,5 @@
-NAME = iter
-
-SRC =  main.cpp \
+NAME = Serializer
+SRC =  main.cpp Serializer.cpp\
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
